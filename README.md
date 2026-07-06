@@ -1,17 +1,17 @@
-About costa_variants-feedstock
-==============================
+About costa-feedstock
+=====================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/costa_variants-feedstock/blob/main/LICENSE.txt)
 
 
-About costa_variants
---------------------
+About costa
+-----------
 
 Home: https://github.com/eth-cscs/COSTA
 
 Package license: BSD-3-Clause
 
-Summary: Communication-Optimal Shuffle & Transpose Algorithm (COSTA) with and without ScaLAPACK wrappers for drop-in replacement
+Summary: Communication-Optimal Shuffle & Transpose Algorithm (COSTA)
 
 Development: https://github.com/eth-cscs/COSTA
 
@@ -20,31 +20,35 @@ Documentation: https://github.com/eth-cscs/COSTA
 COSTA is a communication-optimal, highly-optimised algorithm for data redistribution accross multiple processors,
 using MPI and OpenMP and offering the possibility to transpose and scale some or all data. It implements
 ScaLAPACK routines for matrix scale & transpose operations (sub(C) = alpha * sub(A)^T + beta * C, provided by pxtran(u))
-and data redistribution (sub(C) = sub(A), provided by pxgemr2d) and outperforms other ScaLAPACK implementations by orders 
+and data redistribution (sub(C) = sub(A), provided by pxgemr2d) and outperforms other ScaLAPACK implementations by orders
 of magnitude in some cases. Unlike previous redistribution algorithms, COSTA will also propose the relabelling of MPI ranks
 that minimizes the data reshuffling cost, leaving to users to decide if they want to use it. This way, if the initial and
 the target data distributions differ up to a rank permutation, COSTA will perform no communication, whereas other algorithms
 will reshuffle all the data. Thanks to its optimizations, significant speedups will be achieved even if the proposed rank
 relabelling is not used.
 
-
-About costa
------------
-
-
-
-Package license: 
-
-Summary: Communication-Optimal Shuffle & Transpose Algorithm (COSTA)
-
 About costa-scalapack
 ---------------------
 
+Home: https://github.com/eth-cscs/COSTA
 
-
-Package license: 
+Package license: BSD-3-Clause
 
 Summary: COSTA with ScaLAPACK wrappers for drop-in replacement
+
+Development: https://github.com/eth-cscs/COSTA
+
+Documentation: https://github.com/eth-cscs/COSTA
+
+COSTA is a communication-optimal, highly-optimised algorithm for data redistribution accross multiple processors,
+using MPI and OpenMP and offering the possibility to transpose and scale some or all data. It implements
+ScaLAPACK routines for matrix scale & transpose operations (sub(C) = alpha * sub(A)^T + beta * C, provided by pxtran(u))
+and data redistribution (sub(C) = sub(A), provided by pxgemr2d) and outperforms other ScaLAPACK implementations by orders
+of magnitude in some cases. Unlike previous redistribution algorithms, COSTA will also propose the relabelling of MPI ranks
+that minimizes the data reshuffling cost, leaving to users to decide if they want to use it. This way, if the initial and
+the target data distributions differ up to a rank permutation, COSTA will perform no communication, whereas other algorithms
+will reshuffle all the data. Thanks to its optimizations, significant speedups will be achieved even if the proposed rank
+relabelling is not used.
 
 Current build status
 ====================
@@ -100,10 +104,10 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-costa-green.svg)](https://anaconda.org/conda-forge/costa) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/costa.svg)](https://anaconda.org/conda-forge/costa) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/costa.svg)](https://anaconda.org/conda-forge/costa) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/costa.svg)](https://anaconda.org/conda-forge/costa) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-costa--scalapack-green.svg)](https://anaconda.org/conda-forge/costa-scalapack) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/costa-scalapack.svg)](https://anaconda.org/conda-forge/costa-scalapack) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/costa-scalapack.svg)](https://anaconda.org/conda-forge/costa-scalapack) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/costa-scalapack.svg)](https://anaconda.org/conda-forge/costa-scalapack) |
 
-Installing costa_variants
-=========================
+Installing costa
+================
 
-Installing `costa_variants` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `costa` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
@@ -189,17 +193,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating costa_variants-feedstock
-=================================
+Updating costa-feedstock
+========================
 
-If you would like to improve the costa_variants recipe or build a new
+If you would like to improve the costa recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/costa_variants-feedstock are
+Note that all branches in the conda-forge/costa-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.
@@ -215,6 +219,5 @@ Feedstock Maintainers
 =====================
 
 * [@kabicm](https://github.com/kabicm/)
-* [@ltalirz](https://github.com/ltalirz/)
 * [@mkrack](https://github.com/mkrack/)
 
