@@ -27,6 +27,7 @@ outputs:
       build:
         - ${{ compiler("c") }}
         - ${{ compiler("cxx") }}
+        - ${{ stdlib("c") }}
         - ${{ mpi }}
         - cmake >=3.22
         - ninja >=1.13
@@ -51,6 +52,7 @@ outputs:
       build:
         - ${{ compiler("c") }}
         - ${{ compiler("cxx") }}
+        - ${{ stdlib("c") }}
         - ${{ mpi }}
         - cmake >=3.22
         - ninja >=1.13
